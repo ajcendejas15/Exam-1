@@ -17,17 +17,18 @@
 
 using namespace std;
 
+//Realistically there probably wouldn't be a movie every hour in a single showing theater but why not.
 const int HOURS = 24;
 
 class Theater
 {
 private:
-    //Properties (Public shouldn't be able to change Name, Phone, or Prices of a Theater)
+    //Properties (Public shouldn't be able to change Name, Phone, or Prices of amenities in a Theater)
     string Name;
     string Phone;
     Movie MovieList[HOURS];
-    int PricePopcorn;
-    int PriceSoda;
+    int PricePopcorn; //Decided to make the prices properties of the theater so the functions could reference something
+    int PriceSoda; //Most of the time in a theater you buy a drink and decide after what kind.
     
 public:
     //Functions

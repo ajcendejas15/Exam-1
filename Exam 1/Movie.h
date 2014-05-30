@@ -20,15 +20,18 @@ using namespace std;
 class Movie
 {
 private:
+    //Properties
     string Title;
     string Genre;
     int ShowTime;
     
 public:
+    //Functions to call private properties
     string GetTitle();
     string GetGenre();
     int GetShowTime();
     
+    //Constructors for declaring movies and their genre/showtime
     Movie();
     Movie(string title, string genre, int showtime);
     

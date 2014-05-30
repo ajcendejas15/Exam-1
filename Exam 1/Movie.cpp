@@ -11,6 +11,7 @@
 
 #include "Movie.h"
 
+// Basic Get functions to return the values of the private member variables.
 string Movie::GetTitle()
 {
     return Title;
@@ -26,6 +27,7 @@ int Movie::GetShowTime()
     return ShowTime;
 }
 
+//Constructors
 Movie::Movie()
 {
     Title = "Spiderman 2";
@@ -39,6 +41,6 @@ Movie::Movie(string title, string genre, int showtime)
     if(genre == "Action" || genre == "Horror" || genre == "Documentary" || genre == "Comedy")
         Genre = genre;
     else
-        Genre = "Comedy";
+        Genre = "Comedy"; //Defaults genre to "Comedy" if one of four options above isn't found.
     ShowTime = showtime;
 }

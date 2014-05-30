@@ -14,9 +14,9 @@
 
 void Theater::AddMovie(Movie& Movie)
 {
-    static int i = 0;
+    static int i = 0; //So every time this function is called in a for loop it will have previous value.
     MovieList[i] = Movie;
-    i++;
+    i++; // Increments i so that every movie in an array can be added sequentially.
 }
 
 Movie Theater::GetMovieList(int i)
@@ -27,11 +27,11 @@ Movie Theater::GetMovieList(int i)
 string Theater::GetMovieForHour(int hour)
 {
     string movie;
-    for(int i = 0; i < HOURS; i ++)
+    for(int i = 0; i < HOURS; i ++) //Checks each movie in the theater's list.
     {
-        if(MovieList[i].GetShowTime() == hour)
+        if(MovieList[i].GetShowTime() == hour) //Compares each movie's showtime to parameter 'hour'.
         {
-            movie = MovieList[i].GetTitle();
+            movie = MovieList[i].GetTitle(); // Assigns the movie title to string movie if correct
             return movie;
         }
             else
@@ -42,14 +42,15 @@ string Theater::GetMovieForHour(int hour)
 
 int Theater::GetShowTimeForGenre(string genre)
 {
-    for(int i = 0; i < HOURS; i ++)
+    for(int i = 0; i < HOURS; i ++) //Checks each movie in the theater's list.
     {
-        if(MovieList[i].GetGenre() == genre)
+        if(MovieList[i].GetGenre() == genre) //Compares each movie's genre to the parameter 'genre'.
             return MovieList[i].GetShowTime();
     }
-    return -1;
+    return -1; //Returns -1 if no movies are found with same genre as the parameter.
 }
 
+//Basic get functions to return the value of the private member variables for the prices.
 int Theater::GetPopcornPrice()
 {
     return PricePopcorn;
@@ -60,6 +61,7 @@ int Theater::GetCokePrice()
     return PriceSoda;
 }
 
+//Constructor
 Theater::Theater(string name, string phone)
 {
     Name = name;

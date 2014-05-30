@@ -14,6 +14,7 @@
 #include "Theater.h"
 using namespace std;
 
+//Test program (used the same code as provided but changed one thing on the 3rd if statement)
 int main()
 {
     const int MOVIECOUNT = 11;
@@ -43,6 +44,7 @@ int main()
         errors++;
         cout << "error: not handling 25 correctly\n";
     }
+    //Changed the hour of the next test to 19 to be the same as the value in the array movieListing[].
     if (garland.GetMovieForHour(19) != "Monte Python's Meaning of Life")
     {
         errors++;
