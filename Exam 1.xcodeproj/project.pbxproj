@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		974E8A491937F994009E9F8A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 974E8A481937F994009E9F8A /* main.cpp */; };
 		974E8A4B1937F994009E9F8A /* Exam_1.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 974E8A4A1937F994009E9F8A /* Exam_1.1 */; };
+		974E8A561937FAE7009E9F8A /* Movie.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 974E8A541937FAE7009E9F8A /* Movie.cpp */; };
+		974E8A591937FF2A009E9F8A /* Theater.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 974E8A571937FF2A009E9F8A /* Theater.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +30,10 @@
 		974E8A451937F994009E9F8A /* Exam 1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Exam 1"; sourceTree = BUILT_PRODUCTS_DIR; };
 		974E8A481937F994009E9F8A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		974E8A4A1937F994009E9F8A /* Exam_1.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Exam_1.1; sourceTree = "<group>"; };
+		974E8A541937FAE7009E9F8A /* Movie.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Movie.cpp; sourceTree = "<group>"; };
+		974E8A551937FAE7009E9F8A /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		974E8A571937FF2A009E9F8A /* Theater.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Theater.cpp; sourceTree = "<group>"; };
+		974E8A581937FF2A009E9F8A /* Theater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Theater.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,10 @@
 			isa = PBXGroup;
 			children = (
 				974E8A481937F994009E9F8A /* main.cpp */,
+				974E8A571937FF2A009E9F8A /* Theater.cpp */,
+				974E8A581937FF2A009E9F8A /* Theater.h */,
+				974E8A541937FAE7009E9F8A /* Movie.cpp */,
+				974E8A551937FAE7009E9F8A /* Movie.h */,
 				974E8A4A1937F994009E9F8A /* Exam_1.1 */,
 			);
 			path = "Exam 1";
@@ -117,6 +127,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				974E8A561937FAE7009E9F8A /* Movie.cpp in Sources */,
+				974E8A591937FF2A009E9F8A /* Theater.cpp in Sources */,
 				974E8A491937F994009E9F8A /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
