@@ -16,9 +16,10 @@ void Theater::AddMovie(Movie& Movie)
 {
     static int i = 0; //So every time this function is called in a for loop it will have previous value.
     MovieList[i] = Movie;
-    i++; // Increments i so that every movie in an array can be added sequentially.
+    i++; // Increments static int i so that every movie in an array can be added sequentially.
 }
 
+//Basic get function to return the private member variable MovieList[HOURS].
 Movie Theater::GetMovieList(int i)
 {
     return MovieList[i];
@@ -27,7 +28,7 @@ Movie Theater::GetMovieList(int i)
 string Theater::GetMovieForHour(int hour)
 {
     string movie;
-    if (hour < 0)
+    if (hour < 0 || hour > 23)
         return "";
     for(int i = 0; i < HOURS; i ++) //Checks each movie in the theater's list.
     {
