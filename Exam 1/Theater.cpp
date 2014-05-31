@@ -27,12 +27,14 @@ Movie Theater::GetMovieList(int i)
 string Theater::GetMovieForHour(int hour)
 {
     string movie;
+    if (hour < 0)
+        return "";
     for(int i = 0; i < HOURS; i ++) //Checks each movie in the theater's list.
     {
-        if(MovieList[i].GetShowTime() == hour) //Compares each movie's showtime to parameter 'hour'.
+        if(MovieList[i].GetShowTime() >= hour) //Compares each movie's showtime to parameter 'hour'.
         {
             movie = MovieList[i].GetTitle(); // Assigns the movie title to string movie if correct
-            return movie;
+            return movie; //returns Title of the first movie after parameter hour, exiting function.
         }
             else
             movie = "";
