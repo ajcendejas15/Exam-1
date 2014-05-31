@@ -12,6 +12,7 @@
 #include "Theater.h"
 #include "Movie.h"
 
+//Function to add a single movie to the theater's list.
 void Theater::AddMovie(Movie& Movie)
 {
     static int i = 0; //So every time this function is called in a for loop it will have previous value.
@@ -25,16 +26,17 @@ Movie Theater::GetMovieList(int i)
     return MovieList[i];
 }
 
+// This Function checks to see if there are any movies starting at or after a specified hour.
 string Theater::GetMovieForHour(int hour)
 {
     string movie;
-    if (hour < 0 || hour > 23)
+    if (hour < 0 || hour > 23) // Can't specify any hour outside the 24 hours in a day. (If first hour starts at 0, 23 is start of last hour).
         return "";
     for(int i = 0; i < HOURS; i ++) //Checks each movie in the theater's list.
     {
         if(MovieList[i].GetShowTime() >= hour) //Compares each movie's showtime to parameter 'hour'.
         {
-            movie = MovieList[i].GetTitle(); // Assigns the movie title to string movie if correct
+            movie = MovieList[i].GetTitle(); // Assigns the movie title to the string movie if correct.
             return movie; //returns Title of the first movie after parameter hour, exiting function.
         }
             else
@@ -43,6 +45,7 @@ string Theater::GetMovieForHour(int hour)
     return movie;
 }
 
+// This function checks each movie in theater's list for a specified genre and returns the first movie of that specified genre.
 int Theater::GetShowTimeForGenre(string genre)
 {
     for(int i = 0; i < HOURS; i ++) //Checks each movie in the theater's list.
@@ -64,7 +67,7 @@ int Theater::GetCokePrice()
     return PriceSoda;
 }
 
-//Constructor
+//Constructor with two arguments. (I used set prices for the popcorn and coke, if required I could create set functions for those prices and then the prices could be changed.)
 Theater::Theater(string name, string phone)
 {
     Name = name;

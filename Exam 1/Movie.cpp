@@ -27,7 +27,7 @@ int Movie::GetShowTime()
     return ShowTime;
 }
 
-//Constructors
+//Constructor (No arguments with default movie.)
 Movie::Movie()
 {
     Title = "Spiderman 2";
@@ -35,6 +35,8 @@ Movie::Movie()
     ShowTime = 0;
 }
 
+
+//Constructor (Three arguments, specifies movie title, genre, and showtime. Checks genre for one of four valid options.)
 Movie::Movie(string title, string genre, int showtime)
 {
     Title = title;
